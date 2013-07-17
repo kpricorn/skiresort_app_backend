@@ -1,0 +1,10 @@
+2013-07-17 14:57:20 Error: [MissingControllerException] Controller class TestController could not be found.
+Exception Attributes: array (
+  'class' => 'TestController',
+  'plugin' => NULL,
+)
+Request URL: /test
+Stack Trace:
+#0 /Users/sdecaste/devel/winterlife/skidoo/app/webroot/index.php(110): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /Users/sdecaste/devel/winterlife/skidoo/index.php(43): require('/Users/sdecaste...')
+#2 {main}
