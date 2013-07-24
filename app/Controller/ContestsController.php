@@ -6,6 +6,7 @@ App::uses('AppController', 'Controller');
  * @property Contest $Contest
  */
 class ContestsController extends AppController {
+  public $components = array('RequestHandler');
 
   /**
    * index method
