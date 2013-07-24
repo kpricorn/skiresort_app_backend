@@ -1,8 +1,8 @@
 /[vV]endor
-/app/Plugin/DebugKit
-/app/tmp
-/app/Config/database.php
-/app/tmp
+/Plugin/DebugKit
+/tmp
+/Config/database.php
+/tmp
 /plugins
 /vendors
 /build
