@@ -7,23 +7,25 @@ App::uses('AppController', 'Controller');
  */
 class ContestsController extends AppController {
 
-/**
- * index method
- *
- * @return void
- */
+  public $components = array('RequestHandler');
+
+  /**
+   * index method
+   *
+   * @return void
+   */
   public function index() {
     $this->Contest->recursive = 0;
     $this->set('contests', $this->paginate());
   }
 
-/**
- * view method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
+  /**
+   * view method
+   *
+   * @throws NotFoundException
+   * @param string $id
+   * @return void
+   */
   public function view($id = null) {
     if (!$this->Contest->exists($id)) {
       throw new NotFoundException(__('Invalid contest'));
@@ -32,11 +34,11 @@ class ContestsController extends AppController {
     $this->set('contest', $this->Contest->find('first', $options));
   }
 
-/**
- * add method
- *
- * @return void
- */
+  /**
+   * add method
+   *
+   * @return void
+   */
   public function add() {
     if ($this->request->is('post')) {
       $this->Contest->create();
@@ -49,13 +51,13 @@ class ContestsController extends AppController {
     }
   }
 
-/**
- * edit method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
+  /**
+   * edit method
+   *
+   * @throws NotFoundException
+   * @param string $id
+   * @return void
+   */
   public function edit($id = null) {
     if (!$this->Contest->exists($id)) {
       throw new NotFoundException(__('Invalid contest'));
@@ -73,13 +75,13 @@ class ContestsController extends AppController {
     }
   }
 
-/**
- * delete method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
+  /**
+   * delete method
+   *
+   * @throws NotFoundException
+   * @param string $id
+   * @return void
+   */
   public function delete($id = null) {
     $this->Contest->id = $id;
     if (!$this->Contest->exists()) {
@@ -94,23 +96,23 @@ class ContestsController extends AppController {
     $this->redirect(array('action' => 'index'));
   }
 
-/**
- * admin_index method
- *
- * @return void
- */
+  /**
+   * admin_index method
+   *
+   * @return void
+   */
   public function admin_index() {
     $this->Contest->recursive = 0;
     $this->set('contests', $this->paginate());
   }
 
-/**
- * admin_view method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
+  /**
+   * admin_view method
+   *
+   * @throws NotFoundException
+   * @param string $id
+   * @return void
+   */
   public function admin_view($id = null) {
     if (!$this->Contest->exists($id)) {
       throw new NotFoundException(__('Invalid contest'));
@@ -119,11 +121,11 @@ class ContestsController extends AppController {
     $this->set('contest', $this->Contest->find('first', $options));
   }
 
-/**
- * admin_add method
- *
- * @return void
- */
+  /**
+   * admin_add method
+   *
+   * @return void
+   */
   public function admin_add() {
     if ($this->request->is('post')) {
       $this->Contest->create();
@@ -136,13 +138,13 @@ class ContestsController extends AppController {
     }
   }
 
-/**
- * admin_edit method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
+  /**
+   * admin_edit method
+   *
+   * @throws NotFoundException
+   * @param string $id
+   * @return void
+   */
   public function admin_edit($id = null) {
     if (!$this->Contest->exists($id)) {
       throw new NotFoundException(__('Invalid contest'));
@@ -160,13 +162,13 @@ class ContestsController extends AppController {
     }
   }
 
-/**
- * admin_delete method
- *
- * @throws NotFoundException
- * @param string $id
- * @return void
- */
+  /**
+   * admin_delete method
+   *
+   * @throws NotFoundException
+   * @param string $id
+   * @return void
+   */
   public function admin_delete($id = null) {
     $this->Contest->id = $id;
     if (!$this->Contest->exists()) {
