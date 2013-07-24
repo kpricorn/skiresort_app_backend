@@ -12,11 +12,6 @@
     }
   }
   ],
-  "extra": {
-    "installer-paths": {
-      "app/Plugin/DebugKit": ["cakephp/debug_kit"]
-    }
-  },
   "require" : {
     "php": ">=5.2",
     "cakephp/cakephp" : "2.3.*",
