@@ -1,1 +1,9 @@
-Vendor
+/Vendor
+/app/tmp
+/app/Config/database.php
+/app/tmp
+/plugins
+/vendors
+/build
+/dist
+/tags
