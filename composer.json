@@ -1,19 +1,25 @@
 {
   "repositories" : [
     {
-      "type": "package",
-      "package": {
-        "name" : "cakephp/cakephp",
-        "version" : "2.3.6",
-        "dist" : {
-          "type" : "zip",
-          "url" : "https://github.com/cakephp/cakephp/archive/2.3.6.zip"
-        }
+    "type": "package",
+    "package": {
+      "name" : "cakephp/cakephp",
+      "version" : "2.3.6",
+      "dist" : {
+        "type" : "zip",
+        "url" : "https://github.com/cakephp/cakephp/archive/2.3.6.zip"
       }
     }
+  }
   ],
+  "extra": {
+    "installer-paths": {
+      "app/Plugin/DebugKit": ["cakephp/debug_kit"]
+    }
+  },
   "require" : {
     "php": ">=5.2",
-    "cakephp/cakephp" : "2.3.*"
+    "cakephp/cakephp" : "2.3.*",
+    "cakephp/debug_kit": "2.2.*@dev"
   }
 }

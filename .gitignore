@@ -1,4 +1,5 @@
 /[vV]endor
+/app/Plugin/DebugKit
 /app/tmp
 /app/Config/database.php
 /app/tmp
