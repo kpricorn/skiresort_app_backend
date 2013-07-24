@@ -1,5 +1,5 @@
 <div class="contests form">
-<?php echo $this->Form->create('Contest'); ?>
+<?php echo $this->Form->create('Contest', array('type' => 'file')); ?>
   <fieldset>
     <legend><?php echo __('Admin Edit Contest'); ?></legend>
   <?php
