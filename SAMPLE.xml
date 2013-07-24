@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- _                       
+
+Created by nicolas buechi in 2011.
+Copyright (c) 2012 winterlife.com, zürich. All rights reserved.
+-->
+<trp>
+<contest>
+<file big="http://www.winterlife.com/files/apps/disentis/flyers/pfingsten.jpg"/>
+<maintext><![CDATA[
+<strong><u>Ski Event</u></strong>	
+<br>Pfingstwochenende 18.-20. Mai 2013
+<br>	
+Frühlingsskifahren im Skigebiet Disentis3000!
+<br>
+Slackline Contest & Hot Pot in Lai Alv
+<br>
+<a href="http://www.facebook.com/Disentis3000">Details on facebook</a>
+
+]]></maintext>
+</contest>
+<contest>
+<file big="http://www.winterlife.com/files/apps/disentis/flyers/vvk.jpg"/>
+<maintext><![CDATA[
+<strong><u>10% RABATT AUF DIE JAHRESKARTE IM VORVERKAUF BIS 30.06.2013</u></strong>	
+<br>Nutzen sie bereits den ganzen Sommer das Angebot der Bergbahnen Disentis AG!
+<br>Empfehlen Sie Disentis: Für jede neue Jahreskarte, die sie vermitteln, schenken wir ihnen einen Skiservice.
+<br>Neu profitieren alle Einwohner des Kantons Graubünden vom Einheimischentarif!
+
+
+]]></maintext>
+</contest>
+</trp>
