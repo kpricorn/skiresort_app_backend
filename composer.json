@@ -15,7 +15,6 @@
   "require" : {
     "php": ">=5.2",
     "cakephp/cakephp" : "2.3.*",
-    "cakephp/debug_kit": "2.2.*@dev",
     "mjohnson/uploader": "4.*"
   },
   "config": {
