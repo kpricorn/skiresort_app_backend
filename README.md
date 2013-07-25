@@ -1,10 +1,15 @@
 # Setup
 
-## Create skiresort subdirectory in `/httpdocs/files/apps`
+### Create skiresort subdirectory
+
+Create a subdir with the name of the skiresort in `/httpdocs/files/apps`
+on the ftp host:
 
     /httpdocs/files/apps/tanigawadake
 
-## Deploy cakephp `app` into subfolder
+### Deploy app
+
+Upload the cakephp skiresort_app_backend app into this subfolder
 
     /httpdocs/files/apps/tanigawadake/app
     ├── Config
@@ -23,7 +28,7 @@ e.g. with git ftp push [1]
 
     git ftp push -u <ftp-user> -p <ftp-pw> - ftp://<ftp-host>/httpdocs/files/apps/tanigawadake/app
 
-## Database setup
+### Database setup
 
 * Create new database resort_app_\<resort\> (e.g.  resort_app_tanigawadake)
 * Run `schema.sql` to create tables (`Config/Schema/schema.sql`)
