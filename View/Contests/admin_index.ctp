@@ -1,3 +1,7 @@
+<?php
+$this->Html->addCrumb('Contests');
+?>
+
 <div class="contests index">
   <h2><?php echo __('Contests'); ?></h2>
   <table cellpadding="0" cellspacing="0">

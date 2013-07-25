@@ -1,3 +1,7 @@
+<?php
+$this->Html->addCrumb('Users');
+?>
+
 <div class="users index">
 	<h2><?php echo __('Users'); ?></h2>
 	<table cellpadding="0" cellspacing="0">

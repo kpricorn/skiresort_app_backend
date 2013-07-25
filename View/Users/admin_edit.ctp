@@ -1,3 +1,8 @@
+<?php
+$this->Html->addCrumb('Users', array('action' => 'index'));
+$this->Html->addCrumb('Edit User');
+?>
+
 <div class="users form">
 <?php echo $this->Form->create('User'); ?>
   <fieldset>

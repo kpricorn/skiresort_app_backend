@@ -27,15 +27,15 @@ $description = __d('cake_dev', 'Skiresort App Backend');
     <?php echo $description ?>:
     <?php echo $title_for_layout; ?>
   </title>
-  <?php
-    echo $this->Html->meta('icon');
+<?php
+echo $this->Html->meta('icon');
 
-    echo $this->Html->css('cake.generic');
+echo $this->Html->css('cake.generic');
 
-    echo $this->fetch('meta');
-    echo $this->fetch('css');
-    echo $this->fetch('script');
-  ?>
+echo $this->fetch('meta');
+echo $this->fetch('css');
+echo $this->fetch('script');
+?>
 </head>
 <body>
   <div id="container">
@@ -44,9 +44,28 @@ $description = __d('cake_dev', 'Skiresort App Backend');
     </div>
     <div id="content">
 
-      <?php echo $this->Session->flash(); ?>
+      <?php
+      echo $this->Session->flash();
+      echo $this->Session->flash('auth');
 
+      ?>
+
+      <div class="breadcrumbs index">
+        <?php echo $this->Html->getCrumbs(' > ', 'Home'); ?>
+      </div>
+      <div class="actions">
+        <h3><?php echo __('Navigation'); ?></h3>
+        <ul>
+          <li><?php echo $this->Html->link(__('Home'), array('admin' => false, 'controller' => 'pages', 'action' => 'display', 'home')); ?></li>
+          <li><?php echo $this->Html->link(__('Users'), array('admin' => true, 'controller' => 'users', 'action' => 'index')); ?></li>
+          <li><?php echo $this->Html->link(__('Contests'), array('admin' => true, 'controller' => 'contests', 'action' => 'index')); ?></li>
+          <?php if($this->Session->read('Auth')) { ?>
+            <li><?php echo $this->Html->link('Logout', array('admin' => false, 'controller'=>'users', 'action'=>'logout'));?></li>
+          <?php } ?>
+        </ul>
+      </div>
       <?php echo $this->fetch('content'); ?>
+
     </div>
   </div>
 </body>

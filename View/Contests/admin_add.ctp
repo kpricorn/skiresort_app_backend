@@ -1,3 +1,8 @@
+<?php
+$this->Html->addCrumb('Contests', array('action' => 'index'));
+$this->Html->addCrumb('Add Contest');
+?>
+
 <div class="contests form">
 <?php echo $this->Form->create('Contest', array('type' => 'file')); ?>
   <fieldset>
