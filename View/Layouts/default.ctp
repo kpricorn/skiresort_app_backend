@@ -55,15 +55,16 @@ echo $this->fetch('script');
         <?php echo $this->Html->getCrumbs(' > ', 'Home'); ?>
       </div>
       <div class="actions">
-        <h3><?php echo __('Navigation'); ?></h3>
         <ul>
           <li><?php echo $this->Html->link(__('Home'), array('admin' => false, 'controller' => 'pages', 'action' => 'display', 'home')); ?></li>
           <li><?php echo $this->Html->link(__('Users'), array('admin' => true, 'controller' => 'users', 'action' => 'index')); ?></li>
           <li><?php echo $this->Html->link(__('Contests'), array('admin' => true, 'controller' => 'contests', 'action' => 'index')); ?></li>
+          <li>&nbsp;</li>
           <li><?php echo $this->Html->link('Logout', array('admin' => false, 'controller'=>'users', 'action'=>'logout'));?></li>
         </ul>
       </div>
       <?php } ?>
+
       <?php echo $this->fetch('content'); ?>
 
     </div>
