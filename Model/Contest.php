@@ -15,7 +15,9 @@ class Contest extends AppModel {
 
   public $actsAs = array(
     'Uploader.Attachment' => array(
-      'image' => array()
+      'image' => array(
+        'uploadDir' => '../../uploads'
+      )
     )
   );
 
