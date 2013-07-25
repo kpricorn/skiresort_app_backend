@@ -8,6 +8,7 @@ App::uses('AppController', 'Controller');
 class ContestsController extends AppController {
 
   public $components = array('RequestHandler');
+  public $helpers = array('Js');
 
   /**
    * index method
@@ -16,8 +17,19 @@ class ContestsController extends AppController {
    */
   public function index() {
     $this->Contest->recursive = 0;
-    $this->set('contests', $this->paginate());
+    $this->set('contests', $this->Contest->find('all',array(
+      'order' => 'sort_order ASC'
+    )));
   }
+
+  public function reorder() {
+    foreach ($this->data['Contest'] as $key => $value) {
+      $this->Contest->id = $value;
+      $this->Contest->saveField("sort_order",$key + 1);
+    }
+    exit();
+  }
+
 
   /**
    * admin_index method

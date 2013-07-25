@@ -36,6 +36,8 @@ echo $this->fetch('meta');
 echo $this->fetch('css');
 echo $this->fetch('script');
 ?>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
 </head>
 <body>
   <div id="container">
@@ -44,11 +46,11 @@ echo $this->fetch('script');
     </div>
     <div id="content">
 
-      <?php
-      echo $this->Session->flash();
-      echo $this->Session->flash('auth');
+<?php
+echo $this->Session->flash();
+echo $this->Session->flash('auth');
 
-      ?>
+?>
 
       <?php if ($authUser) { ?>
       <div class="breadcrumbs index">
@@ -69,5 +71,6 @@ echo $this->fetch('script');
 
     </div>
   </div>
+<?php echo $this->Js->writeBuffer();?>
 </body>
 </html>
