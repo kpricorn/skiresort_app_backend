@@ -22,14 +22,13 @@ class ContestsController extends AppController {
     )));
   }
 
-  public function reorder() {
+  public function admin_reorder() {
     foreach ($this->data['Contest'] as $key => $value) {
       $this->Contest->id = $value;
       $this->Contest->saveField("sort_order",$key + 1);
     }
     exit();
   }
-
 
   /**
    * admin_index method
