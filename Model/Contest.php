@@ -14,6 +14,12 @@ class Contest extends AppModel {
   public $displayField = 'maintext';
 
   public $actsAs = array(
+    'Uploader.FileValidation' => array(
+      'image' => array(
+        'extension' => array('gif', 'jpg', 'png', 'jpeg'),
+        'required' => true
+      )
+    ),
     'Uploader.Attachment' => array(
       'image' => array(
         'uploadDir' => '../../uploads'
