@@ -1,4 +1,5 @@
-* xml rewrite
-* auth
-* file upload folder
-* absolute file url
+* XML rewrite
+* Auth
+* File upload folder
+* Absolute file url
+* Sort order
