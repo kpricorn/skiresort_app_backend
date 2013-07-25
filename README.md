@@ -34,6 +34,14 @@ e.g. with git ftp push [1]
 * Run `schema.sql` to create tables (`Config/Schema/schema.sql`)
 * Copy `database.php.sample` to `database.php` and edit the necessary fields.
 
+### Test application and Create User
+
+* Open the URL in your browser http://\<host\>/files/apps/\<resort\>/app
+
+e.g. http://winterlife.com/files/apps/tanigawadake/app
+
+Go to the Users tab and create a new user.
+
 ### Legacy URL Support
 
 For skiresorts where the app expects the events xml file to be located
