@@ -9,7 +9,7 @@ Copyright (c) 2013 gorillasoftware.ch, zürich. All rights reserved.
 <?php foreach ($contests as $contest): ?>
   <contest>
     <id><?php echo h($contest['Contest']['id']); ?></id>
-    <file big="<?php echo h('http://'.$_SERVER["SERVER_NAME"].dirname(dirname(dirname($_SERVER['SCRIPT_NAME']))).'/uploads/'.$contest['Contest']['image']); ?>"/>
+    <file big="<?php echo $this->Html->url('/../uploads/'.$contest['Contest']['image'], true ) ?>"/>
     <maintext><![CDATA[<?php echo h($contest['Contest']['maintext']); ?>]]></maintext>
 
     <created><?php echo h($contest['Contest']['created']); ?></created>

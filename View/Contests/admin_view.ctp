@@ -1,5 +1,6 @@
 <div class="contests view">
 <h2><?php  echo __('Contest'); ?></h2>
+  <?php echo $this->Html->image($this->Html->url('/../uploads/'.$contest['Contest']['image'], true ), array('alt' => h($contest['Contest']['image']))); ?>
   <dl>
     <dt><?php echo __('Id'); ?></dt>
     <dd>
