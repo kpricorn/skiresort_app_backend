@@ -12,7 +12,7 @@
   <?php foreach ($contests as $contest): ?>
   <tr>
     <td><?php echo h($contest['Contest']['id']); ?>&nbsp;</td>
-    <td><?php echo h($contest['Contest']['maintext']); ?>&nbsp;</td>
+    <td><?php echo h( $this->Text->truncate($contest['Contest']['maintext'])); ?>&nbsp;</td>
     <td><?php echo h($contest['Contest']['image']); ?>&nbsp;</td>
     <td><?php echo h($contest['Contest']['created']); ?>&nbsp;</td>
     <td><?php echo h($contest['Contest']['modified']); ?>&nbsp;</td>
