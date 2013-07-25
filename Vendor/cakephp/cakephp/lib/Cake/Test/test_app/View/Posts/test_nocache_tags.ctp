@@ -1,79 +1,79 @@
 <p>
-  <!--nocache-->
-  <span class="notice">
-    <?php
-      echo __d('cake', 'Your tmp directory is ');
-      if (is_writable(TMP)):
-        echo __d('cake', 'writable.');
-      else:
-        echo __d('cake', 'NOT writable.');
-      endif;
-    ?>
-  </span>
-  <!--/nocache-->
+	<!--nocache-->
+	<span class="notice">
+		<?php
+			echo __d('cake', 'Your tmp directory is ');
+			if (is_writable(TMP)):
+				echo __d('cake', 'writable.');
+			else:
+				echo __d('cake', 'NOT writable.');
+			endif;
+		?>
+	</span>
+	<!--/nocache-->
 </p>
 <p>
-  <span class="notice">
-    <?php
-      echo __d('cake', 'Your cache is ');
-      if (Cache::isInitialized('default')):
-        echo __d('cake', 'set up and initialized properly.');
-        $settings = Cache::settings();
-        echo '<p>' . $settings['engine'];
-        echo __d('cake', ' is being used to cache, to change this edit config/core.php ');
-        echo '</p>';
+	<span class="notice">
+		<?php
+			echo __d('cake', 'Your cache is ');
+			if (Cache::isInitialized('default')):
+				echo __d('cake', 'set up and initialized properly.');
+				$settings = Cache::settings();
+				echo '<p>' . $settings['engine'];
+				echo __d('cake', ' is being used to cache, to change this edit config/core.php ');
+				echo '</p>';
 
-        echo 'Settings: <ul>';
-        foreach ($settings as $name => $value):
-          if (is_array($value)):
-            $value = join(',', $value);
-          endif;
-          echo '<li>' . $name . ': ' . $value . '</li>';
-        endforeach;
-        echo '</ul>';
+				echo 'Settings: <ul>';
+				foreach ($settings as $name => $value):
+					if (is_array($value)):
+						$value = join(',', $value);
+					endif;
+					echo '<li>' . $name . ': ' . $value . '</li>';
+				endforeach;
+				echo '</ul>';
 
-      else:
-        echo __d('cake', 'NOT working.');
-        echo '<br />';
-        if (is_writable(TMP)):
-          echo __d('cake', 'Edit: config/core.php to insure you have the newset version of this file and the variable $cakeCache set properly');
-        endif;
-      endif;
-    ?>
-  </span>
+			else:
+				echo __d('cake', 'NOT working.');
+				echo '<br />';
+				if (is_writable(TMP)):
+					echo __d('cake', 'Edit: config/core.php to insure you have the newset version of this file and the variable $cakeCache set properly');
+				endif;
+			endif;
+		?>
+	</span>
 </p>
 <p>
-  <span class="notice">
-    <?php
-      echo __d('cake', 'Your database configuration file is ');
-      $filePresent = null;
-      if (file_exists(APP . 'Config'.'database.php')):
-        echo __d('cake', 'present.');
-        $filePresent = true;
-      else:
-        echo __d('cake', 'NOT present.');
-        echo '<br/>';
-        echo __d('cake', 'Rename config/database.php.default to config/database.php');
-      endif;
-    ?>
-  </span>
+	<span class="notice">
+		<?php
+			echo __d('cake', 'Your database configuration file is ');
+			$filePresent = null;
+			if (file_exists(APP . 'Config'.'database.php')):
+				echo __d('cake', 'present.');
+				$filePresent = true;
+			else:
+				echo __d('cake', 'NOT present.');
+				echo '<br/>';
+				echo __d('cake', 'Rename config/database.php.default to config/database.php');
+			endif;
+		?>
+	</span>
 </p>
 <?php
 if (!empty($filePresent)):
-  App::uses('ConnectionManager', 'Model');
-   $connected = ConnectionManager::getDataSource('default');
+	App::uses('ConnectionManager', 'Model');
+ 	$connected = ConnectionManager::getDataSource('default');
 ?>
 <p>
-  <span class="notice">
-    <?php echo __d('cake', 'Cake');
-      if ($connected->isConnected()):
-         __d('cake', ' is able to ');
-      else:
-        __d('cake', ' is NOT able to ');
-      endif;
-      __d('cake', 'connect to the database.');
-    ?>
-  </span>
+	<span class="notice">
+		<?php echo __d('cake', 'Cake');
+			if ($connected->isConnected()):
+				__d('cake', ' is able to ');
+			else:
+				__d('cake', ' is NOT able to ');
+			endif;
+			__d('cake', 'connect to the database.');
+		?>
+	</span>
 </p>
 <?php endif; ?>
 <h2><?php echo __d('cake', 'Release Notes for CakePHP %s.', Configure::version()); ?></h2>
@@ -99,26 +99,26 @@ if (!empty($filePresent)):
 <?php echo __d('cake', 'Our primary goal is to provide a structured framework that enables PHP users at all levels to rapidly develop robust web applications, without any loss to flexibility.'); ?>
 </p>
 <ul>
-  <li><a href="http://cakefoundation.org/"><?php echo __d('cake', 'Cake Software Foundation'); ?> </a>
-  <ul><li><?php echo __d('cake', 'Promoting development related to CakePHP'); ?></li></ul></li>
-  <li><a href="http://bakery.cakephp.org"><?php echo __d('cake', 'The Bakery'); ?> </a>
-  <ul><li><?php echo __d('cake', 'Everything CakePHP'); ?></li></ul></li>
-  <li><a href="http://astore.amazon.com/cakesoftwaref-20/"><?php echo __d('cake', 'Book Store'); ?> </a>
-  <ul><li><?php echo __d('cake', 'Recommended Software Books'); ?></li></ul></li>
-  <li><a href="http://www.cafepress.com/cakefoundation"><?php echo __d('cake', 'CakeSchwag'); ?> </a>
-  <ul><li><?php echo __d('cake', 'Get your own CakePHP gear - Doughnate to Cake'); ?></li></ul></li>
-  <li><a href="http://www.cakephp.org"><?php echo __d('cake', 'CakePHP'); ?> </a>
-  <ul><li><?php echo __d('cake', 'The Rapid Development Framework'); ?></li></ul></li>
-  <li><a href="http://manual.cakephp.org"><?php echo __d('cake', 'CakePHP Manual'); ?> </a>
-  <ul><li><?php echo __d('cake', 'Your Rapid Development Cookbook'); ?></li></ul></li>
-  <li><a href="http://api.cakephp.org"><?php echo __d('cake', 'CakePHP API'); ?> </a>
-  <ul><li><?php echo __d('cake', 'Docblock Your Best Friend'); ?></li></ul></li>
-  <li><a href="http://www.cakeforge.org"><?php echo __d('cake', 'CakeForge'); ?> </a>
-  <ul><li><?php echo __d('cake', 'Open Development for CakePHP'); ?></li></ul></li>
-  <li><a href="https://trac.cakephp.org/"><?php echo __d('cake', 'CakePHP Trac'); ?> </a>
-  <ul><li><?php echo __d('cake', 'For the Development of CakePHP (Tickets, SVN browser, Roadmap, Changelogs)'); ?></li></ul></li>
-  <li><a href="http://groups-beta.google.com/group/cake-php"><?php echo __d('cake', 'CakePHP Google Group'); ?> </a>
-  <ul><li><?php echo __d('cake', 'Community mailing list'); ?></li></ul></li>
-  <li><a href="irc://irc.freenode.net/cakephp">irc.freenode.net #cakephp</a>
-  <ul><li><?php echo __d('cake', 'Live chat about CakePHP'); ?></li></ul></li>
+	<li><a href="http://cakefoundation.org/"><?php echo __d('cake', 'Cake Software Foundation'); ?> </a>
+	<ul><li><?php echo __d('cake', 'Promoting development related to CakePHP'); ?></li></ul></li>
+	<li><a href="http://bakery.cakephp.org"><?php echo __d('cake', 'The Bakery'); ?> </a>
+	<ul><li><?php echo __d('cake', 'Everything CakePHP'); ?></li></ul></li>
+	<li><a href="http://astore.amazon.com/cakesoftwaref-20/"><?php echo __d('cake', 'Book Store'); ?> </a>
+	<ul><li><?php echo __d('cake', 'Recommended Software Books'); ?></li></ul></li>
+	<li><a href="http://www.cafepress.com/cakefoundation"><?php echo __d('cake', 'CakeSchwag'); ?> </a>
+	<ul><li><?php echo __d('cake', 'Get your own CakePHP gear - Doughnate to Cake'); ?></li></ul></li>
+	<li><a href="http://www.cakephp.org"><?php echo __d('cake', 'CakePHP'); ?> </a>
+	<ul><li><?php echo __d('cake', 'The Rapid Development Framework'); ?></li></ul></li>
+	<li><a href="http://manual.cakephp.org"><?php echo __d('cake', 'CakePHP Manual'); ?> </a>
+	<ul><li><?php echo __d('cake', 'Your Rapid Development Cookbook'); ?></li></ul></li>
+	<li><a href="http://api.cakephp.org"><?php echo __d('cake', 'CakePHP API'); ?> </a>
+	<ul><li><?php echo __d('cake', 'Docblock Your Best Friend'); ?></li></ul></li>
+	<li><a href="http://www.cakeforge.org"><?php echo __d('cake', 'CakeForge'); ?> </a>
+	<ul><li><?php echo __d('cake', 'Open Development for CakePHP'); ?></li></ul></li>
+	<li><a href="https://trac.cakephp.org/"><?php echo __d('cake', 'CakePHP Trac'); ?> </a>
+	<ul><li><?php echo __d('cake', 'For the Development of CakePHP (Tickets, SVN browser, Roadmap, Changelogs)'); ?></li></ul></li>
+	<li><a href="http://groups-beta.google.com/group/cake-php"><?php echo __d('cake', 'CakePHP Google Group'); ?> </a>
+	<ul><li><?php echo __d('cake', 'Community mailing list'); ?></li></ul></li>
+	<li><a href="irc://irc.freenode.net/cakephp">irc.freenode.net #cakephp</a>
+	<ul><li><?php echo __d('cake', 'Live chat about CakePHP'); ?></li></ul></li>
 </ul>
