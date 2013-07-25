@@ -46,10 +46,12 @@ class AppController extends Controller {
   var $uses = array('User');
 
   public function beforeFilter() {
+    $this->set('authUser', $this->Auth->user());
     if ($this->User->find('count') > 0) {
       $this->Auth->allow('index');
     } else {
       $this->Auth->allow();
+      $this->set('authUser', 'dummy');
     }
   }
   public function beforeRender() {

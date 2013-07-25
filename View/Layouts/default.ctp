@@ -50,6 +50,7 @@ echo $this->fetch('script');
 
       ?>
 
+      <?php if ($authUser) { ?>
       <div class="breadcrumbs index">
         <?php echo $this->Html->getCrumbs(' > ', 'Home'); ?>
       </div>
@@ -59,11 +60,10 @@ echo $this->fetch('script');
           <li><?php echo $this->Html->link(__('Home'), array('admin' => false, 'controller' => 'pages', 'action' => 'display', 'home')); ?></li>
           <li><?php echo $this->Html->link(__('Users'), array('admin' => true, 'controller' => 'users', 'action' => 'index')); ?></li>
           <li><?php echo $this->Html->link(__('Contests'), array('admin' => true, 'controller' => 'contests', 'action' => 'index')); ?></li>
-          <?php if($this->Session->read('Auth')) { ?>
-            <li><?php echo $this->Html->link('Logout', array('admin' => false, 'controller'=>'users', 'action'=>'logout'));?></li>
-          <?php } ?>
+          <li><?php echo $this->Html->link('Logout', array('admin' => false, 'controller'=>'users', 'action'=>'logout'));?></li>
         </ul>
       </div>
+      <?php } ?>
       <?php echo $this->fetch('content'); ?>
 
     </div>
