@@ -34,4 +34,20 @@ e.g. with git ftp push [1]
 * Run `schema.sql` to create tables (`Config/Schema/schema.sql`)
 * Copy `database.php.sample` to `database.php` and edit the necessary fields.
 
+### Legacy URL Support
+
+For skiresorts where the app expects the events xml file to be located
+at
+
+    http://winterlife.com/files/apps/<resort>/xml/trpevents.xml
+
+add a rewrite rule for the existing xml file location in a .htaccess
+file in the resort directory:
+
+    # /httpdocs/files/apps/<resort>/.htaccess
+    <IfModule mod_rewrite.c>
+        RewriteEngine on
+        RewriteRule xml/trpevents.xml app/webroot/index.php/contests.xml [L]
+    </IfModule>
+
 [1] https://github.com/resmo/git-ftp
