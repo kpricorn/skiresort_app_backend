@@ -38,7 +38,7 @@ if (!defined('DS')) {
  *
  */
 if (!defined('ROOT')) {
-  define('ROOT', dirname(dirname(dirname(__FILE__))));
+  define('ROOT', dirname(dirname(__FILE__)));
 }
 
 /**
@@ -46,7 +46,7 @@ if (!defined('ROOT')) {
  *
  */
 if (!defined('APP_DIR')) {
-  define('APP_DIR', basename(dirname(dirname(__FILE__))));
+  define('APP_DIR', '');
 }
 
 /**
@@ -63,7 +63,7 @@ if (!defined('APP_DIR')) {
  * The following line differs from its sibling
  * /app/webroot/index.php
  */
-define('CAKE_CORE_INCLUDE_PATH',  DS . 'Users' . DS . 'sdecaste' . DS . 'devel' . DS . 'winterlife' . DS . 'skiresort_app_cms' . DS . 'vendor' . DS . 'cakephp' . DS . 'cakephp' . DS . 'lib');
+define('CAKE_CORE_INCLUDE_PATH',  ROOT . DS . 'Vendor' . DS . 'cakephp' . DS . 'cakephp' . DS . 'lib');
 
 /**
  * Editing below this line should NOT be necessary.
