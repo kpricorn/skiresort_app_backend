@@ -37,7 +37,7 @@ $this->Html->addCrumb('Contests');
 <?php
 $this->Js->get('#contests');
 $this->Js->sortable(array(
-  'complete' => '$.post("/contests/reorder", $("#contests").sortable("serialize"))',
+  'complete' => '$.post(' . $this->Html->url(array("action" => "reorder")) . ', $("#contests").sortable("serialize"))',
   'handle' => '.handle'
 ));
 ?>
