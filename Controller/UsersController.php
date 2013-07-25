@@ -32,21 +32,6 @@ class UsersController extends AppController {
   }
 
   /**
-   * admin_view method
-   *
-   * @throws NotFoundException
-   * @param string $id
-   * @return void
-   */
-  public function admin_view($id = null) {
-    if (!$this->User->exists($id)) {
-      throw new NotFoundException(__('Invalid user'));
-    }
-    $options = array('conditions' => array('User.' . $this->User->primaryKey => $id));
-    $this->set('user', $this->User->find('first', $options));
-  }
-
-  /**
    * admin_add method
    *
    * @return void
