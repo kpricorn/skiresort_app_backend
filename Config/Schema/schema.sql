@@ -16,6 +16,7 @@ CREATE TABLE `resort_app_disentis`.`contests` (
 	`id` int(10) NOT NULL AUTO_INCREMENT,
 	`maintext` text CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
 	`image` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+	`sort_order` int(10) DEFAULT NULL,
 	`created` datetime DEFAULT NULL,
 	`modified` datetime DEFAULT NULL,	PRIMARY KEY  (`id`)) 	DEFAULT CHARSET=utf8,
 	COLLATE=utf8_general_ci,
