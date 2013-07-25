@@ -76,6 +76,8 @@ p {
 /** Layout **/
 #container {
   text-align: left;
+  margin: auto;
+  max-width: 1024px;
 }
 
 #header{
@@ -109,12 +111,26 @@ p {
   clear: both;
   padding: 6px 10px;
   text-align: right;
+  color: grey;
+}
+
+#footer a, #footer {
+  color: grey;
+  text-decoration: none;
+  font-weight: normal;
 }
 
 /** containers **/
 div.form,
 div.index,
 div.view {
+  float:right;
+  width:76%;
+  border-left:1px solid #666;
+  padding:10px 2%;
+  min-height: 400px;
+}
+div.breadcrumbs {
   float:right;
   width:76%;
   border-left:1px solid #666;

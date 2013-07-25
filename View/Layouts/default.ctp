@@ -41,9 +41,7 @@ echo $this->fetch('script');
 </head>
 <body>
   <div id="container">
-    <div id="header">
-      <h1><?php echo $description ?></h1>
-    </div>
+    <div id="header"></div>
     <div id="content">
 
 <?php
@@ -53,7 +51,7 @@ echo $this->Session->flash('auth');
 ?>
 
       <?php if ($authUser) { ?>
-      <div class="breadcrumbs index">
+      <div class="breadcrumbs">
         <?php echo $this->Html->getCrumbs(' > ', 'Home'); ?>
       </div>
       <div class="actions">
@@ -62,6 +60,7 @@ echo $this->Session->flash('auth');
           <li><?php echo $this->Html->link(__('Users'), array('admin' => true, 'controller' => 'users', 'action' => 'index')); ?></li>
           <li><?php echo $this->Html->link(__('Contests'), array('admin' => true, 'controller' => 'contests', 'action' => 'index')); ?></li>
           <li>&nbsp;</li>
+          <li><?php echo $this->Html->link('Status', array('admin' => false, 'controller'=>'pages', 'action'=>'display', 'status'));?></li>
           <li><?php echo $this->Html->link('Logout', array('admin' => false, 'controller'=>'users', 'action'=>'logout'));?></li>
         </ul>
       </div>
@@ -69,6 +68,11 @@ echo $this->Session->flash('auth');
 
       <?php echo $this->fetch('content'); ?>
 
+    </div>
+    <div id="footer">
+      Copyright © 2013 <?php echo$this->Html->link('gorilla software GmbH', 'http://gorillasoftware.ch') ?>
+      <br/>
+      <?php echo $this->Html->link('Skiresort App backend', 'http://github.com/sdecastelberg/skiresort_app_backend'); ?>
     </div>
   </div>
 <?php echo $this->Js->writeBuffer();?>
