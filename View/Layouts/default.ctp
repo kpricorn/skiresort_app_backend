@@ -72,7 +72,7 @@ echo $this->Session->flash('auth');
     <div id="footer">
       Copyright © 2013 <?php echo$this->Html->link('gorilla software GmbH', 'http://gorillasoftware.ch') ?>
       <br/>
-      <?php echo $this->Html->link('Skiresort App backend', 'http://github.com/sdecastelberg/skiresort_app_backend'); ?>
+      <?php echo $this->Html->link('Skiresort App backend on github', 'http://github.com/sdecastelberg/skiresort_app_backend'); ?>
     </div>
   </div>
 <?php echo $this->Js->writeBuffer();?>
