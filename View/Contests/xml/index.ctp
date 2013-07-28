@@ -10,8 +10,9 @@ Copyright (c) 2013 gorillasoftware.ch, zürich. All rights reserved.
   <contest>
     <id><?php echo h($contest['Contest']['id']); ?></id>
     <file big="<?php echo $this->Html->url('/../uploads/'.$contest['Contest']['image'], true ) ?>"/>
-    <maintext><![CDATA[<?php echo h($contest['Contest']['maintext']); ?>]]></maintext>
-
+    <maintext><![CDATA[
+      <?php echo $contest['Contest']['maintext']; ?>
+    ]]></maintext>
     <created><?php echo h($contest['Contest']['created']); ?></created>
     <modified><?php echo h($contest['Contest']['modified']); ?></modified>
   </contest>
