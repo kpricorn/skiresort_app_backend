@@ -8,7 +8,7 @@ class SkiresortAppCmsSchema extends CakeSchema {
 	public function after($event = array()) {
 	}
 
-	public $contests = array(
+	public $events = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 10, 'key' => 'primary'),
 		'maintext' => array('type' => 'text', 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'image' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 200, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),

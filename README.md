@@ -55,7 +55,7 @@ file in the resort directory:
     # /httpdocs/files/apps/<resort>/.htaccess
     <IfModule mod_rewrite.c>
         RewriteEngine on
-        RewriteRule xml/trpevents.xml app/webroot/index.php/contests.xml [L]
+        RewriteRule xml/trpevents.xml app/webroot/index.php/events.xml [L]
     </IfModule>
 
 [1] https://github.com/resmo/git-ftp

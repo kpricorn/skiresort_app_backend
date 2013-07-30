@@ -8,11 +8,11 @@ Cake Schema Shell
 ---------------------------------------------------------------
 
 
-DROP TABLE IF EXISTS `resort_app_disentis`.`contests`;
+DROP TABLE IF EXISTS `resort_app_disentis`.`events`;
 DROP TABLE IF EXISTS `resort_app_disentis`.`users`;
 
 
-CREATE TABLE `resort_app_disentis`.`contests` (
+CREATE TABLE `resort_app_disentis`.`events` (
 	`id` int(10) NOT NULL AUTO_INCREMENT,
 	`maintext` text CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
 	`image` varchar(200) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,

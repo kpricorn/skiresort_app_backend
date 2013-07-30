@@ -1,10 +1,10 @@
 <?php
 App::uses('AppModel', 'Model');
 /**
- * Contest Model
+ * Event Model
  *
  */
-class Contest extends AppModel {
+class Event extends AppModel {
 
 /**
  * Display field

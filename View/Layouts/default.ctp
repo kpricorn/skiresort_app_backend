@@ -58,7 +58,7 @@ echo $this->Session->flash('auth');
         <ul>
           <li><?php echo $this->Html->link(__('Home'), array('admin' => false, 'controller' => 'pages', 'action' => 'display', 'home')); ?></li>
           <li><?php echo $this->Html->link(__('Users'), array('admin' => true, 'controller' => 'users', 'action' => 'index')); ?></li>
-          <li><?php echo $this->Html->link(__('Contests'), array('admin' => true, 'controller' => 'contests', 'action' => 'index')); ?></li>
+          <li><?php echo $this->Html->link(__('Events'), array('admin' => true, 'controller' => 'events', 'action' => 'index')); ?></li>
           <li>&nbsp;</li>
           <li><?php echo $this->Html->link('Status', array('admin' => false, 'controller'=>'pages', 'action'=>'display', 'status'));?></li>
           <li><?php echo $this->Html->link('Logout', array('admin' => false, 'controller'=>'users', 'action'=>'logout'));?></li>
