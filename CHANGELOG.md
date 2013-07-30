@@ -3,6 +3,7 @@
 ### 30 July 2013, 1.1.0
 
 * Rename `Event` to `Contest`
+* Restrict image dimensions to 600px x 960px
 
 ### 28 July 2013, 1.0.1
 

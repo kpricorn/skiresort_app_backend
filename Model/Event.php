@@ -17,7 +17,9 @@ class Event extends AppModel {
     'Uploader.FileValidation' => array(
       'image' => array(
         'extension' => array('gif', 'jpg', 'png', 'jpeg'),
-        'required' => true
+        'required' => true,
+        'maxWidth' => 600,
+        'maxHeight' => 960
       )
     ),
     'Uploader.Attachment' => array(

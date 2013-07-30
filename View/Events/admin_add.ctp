@@ -11,6 +11,7 @@ $this->Html->addCrumb('Add Event');
     echo $this->Form->input('maintext');
     echo $this->Form->input('image', array('type' => 'file'));
   ?>
+  <p>Max file dimensions: 600px x 960px</p>
   </fieldset>
 <?php echo $this->Form->end(__('Submit')); ?>
 </div>
