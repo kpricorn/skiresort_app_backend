@@ -32,7 +32,7 @@ e.g. with git ftp push [1]
 
 * Create new database resort_app_\<resort\> (e.g.  resort_app_tanigawadake)
 * Run `schema.sql` to create tables (`Config/Schema/schema.sql`)
-* Copy `database.php.sample` to `database.php` and edit the necessary fields.
+* Copy `database.php.default` to `database.php` and edit the necessary fields.
 
 ### Test application and Create User
 
