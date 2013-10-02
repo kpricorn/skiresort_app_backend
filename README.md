@@ -42,6 +42,10 @@ e.g. http://winterlife.com/files/apps/tanigawadake/app
 
 Go to the Users tab and create a new user.
 
+The events can now be accessed via http://\<host\>/files/apps/\<resort\>/app/events.xml
+
+e.g. http://winterlife.com/files/apps/tanigawadake/app/events.xml
+
 ### Legacy URL Support
 
 For skiresorts where the app expects the events xml file to be located
