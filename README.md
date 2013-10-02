@@ -36,13 +36,13 @@ e.g. with git ftp push [1]
 
 ### Test application and Create User
 
-* Open the URL in your browser http://\<host\>/files/apps/\<resort\>/app
+* Open the URL in your browser `http://\<host\>/files/apps/\<resort\>/app`
 
 e.g. http://winterlife.com/files/apps/tanigawadake/app
 
 Go to the Users tab and create a new user.
 
-The events can now be accessed via http://\<host\>/files/apps/\<resort\>/app/events.xml
+The events can now be accessed via `http://\<host\>/files/apps/\<resort\>/app/events.xml`
 
 e.g. http://winterlife.com/files/apps/tanigawadake/app/events.xml
 
