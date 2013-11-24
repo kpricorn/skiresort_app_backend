@@ -62,4 +62,17 @@ file in the resort directory:
         RewriteRule xml/trpevents.xml app/webroot/index.php/events.xml [L]
     </IfModule>
 
+# Development
+
+Use cake to run a development server
+
+    ./Console/cake server -p 3000
+
+The following url's are then available:
+
+    # Admin interface
+    http://localhost:3000/
+    # Events XML route
+    http://localhost:3000/events.xml
+
 [1] https://github.com/resmo/git-ftp
