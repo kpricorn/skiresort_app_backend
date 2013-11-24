@@ -21,7 +21,7 @@ $this->Html->addCrumb('Events');
     <tr id='Event_<?php echo $event['Event']['id']?>'>
       <td class="handle" style="cursor:pointer;"><?php echo $this->Html->image('sort.png') ?></td>
       <td><?php echo h($event['Event']['id']); ?>&nbsp;</td>
-      <td><?php echo h( $this->Text->truncate($event['Event']['maintext'])); ?>&nbsp;</td>
+      <td><?php echo h($this->Text->truncate($event['Event']['maintext'])); ?>&nbsp;</td>
       <td><?php echo h($event['Event']['image']); ?>&nbsp;</td>
       <td><?php echo h($event['Event']['created']); ?>&nbsp;</td>
       <td><?php echo h($event['Event']['modified']); ?>&nbsp;</td>
