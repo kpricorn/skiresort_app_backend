@@ -13,13 +13,17 @@ class Event extends AppModel {
  */
   public $displayField = 'maintext';
 
+  public $order = "sort_order ASC";
+
   public $actsAs = array(
     'Uploader.FileValidation' => array(
       'image' => array(
         'extension' => array('gif', 'jpg', 'png', 'jpeg'),
         'required' => true,
         'maxWidth' => 600,
-        'maxHeight' => 960
+        'minWidth' => 600,
+        'maxHeight' => 960,
+        'minHeight' => 960,
       )
     ),
     'Uploader.Attachment' => array(
