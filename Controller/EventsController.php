@@ -17,9 +17,7 @@ class EventsController extends AppController {
    */
   public function index() {
     $this->Event->recursive = 0;
-    $this->set('events', $this->Event->find('all',array(
-      'order' => 'sort_order ASC'
-    )));
+    $this->set('events', $this->Event->find('all'));
   }
 
   public function admin_reorder() {
@@ -37,7 +35,7 @@ class EventsController extends AppController {
    */
   public function admin_index() {
     $this->Event->recursive = 0;
-    $this->set('events', $this->paginate());
+    $this->set('events', $this->Event->find('all'));
   }
 
   /**
