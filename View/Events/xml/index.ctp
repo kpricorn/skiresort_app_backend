@@ -10,9 +10,7 @@ Copyright (c) 2013 gorillasoftware.ch, zürich. All rights reserved.
   <event>
     <id><?php echo h($event['Event']['id']); ?></id>
     <file big="<?php echo $this->Html->url('/../uploads/'.$event['Event']['image'], true ) ?>"/>
-    <maintext><![CDATA[
-      <?php echo $event['Event']['maintext']; ?>
-    ]]></maintext>
+    <maintext><![CDATA[<?php echo $event['Event']['maintext']; ?>]]></maintext>
     <created><?php echo h($event['Event']['created']); ?></created>
     <modified><?php echo h($event['Event']['modified']); ?></modified>
   </event>
